@@ -41,3 +41,4 @@ Para esta última parte, deberán crear 2 nuevos visitadores:
 
 2️⃣ El segundo visitará el árbol genealógico y determinará quién tiene el nombre más largo.
 
+///tenemos que hacer un nodo de tipo generico para poder modificar 
