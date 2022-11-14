@@ -57,9 +57,9 @@ namespace Program
 
             np1.Accept(v2);
             Console.WriteLine($"Nombre mas largo es {v2.LongestName}");
-            
+
             np1.Accept(v3);
-            Console.WriteLine($"El mas viejo es: {v3.OldestKid} y es");
+            Console.WriteLine($"El mas viejo es: {v3.OldestKid}");
 
         }
     }

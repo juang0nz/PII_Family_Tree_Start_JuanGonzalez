@@ -17,7 +17,6 @@ namespace Library
             }
         }
        
-        protected StringBuilder ContentBuilder { get; } = new StringBuilder();
         public void Visit(Node<Person> node)
         {
             node.Content.Accept(this);
