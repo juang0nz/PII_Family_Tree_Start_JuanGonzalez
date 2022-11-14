@@ -9,7 +9,7 @@ namespace Program
         {
             Person p1 = new Person ("Juan",33);
             Person p2 = new Person ("Pedro",40);
-            Person p3 = new Person ("Agustin",50);
+            Person p3 = new Person ("Agustina",50);
             Person p4 = new Person ("Maria",60);
             Person p5 = new Person ("Laura",5);
             Person p6 = new Person ("Facundo",20);
@@ -29,7 +29,7 @@ namespace Program
             //en el nodo de Maria agrego estos dos:
         
             np4.AddChildren(np2); //agrego a pedro como hijo de Maria
-            np4.AddChildren(np3); //agrego Agustin como hijo de Maria
+            np4.AddChildren(np3); //agrego Agustina como hijo de Maria
 
             //el segundo:
 
@@ -41,19 +41,25 @@ namespace Program
 
             np6.AddChildren(np5); //agrego a Laura como hija de Facundo
 
-    
+            //creo instancia de los visitadores:
+
             SumVisitor v1 = new SumVisitor();
             VisitorName v2 = new VisitorName();
             VisitorOld v3 = new VisitorOld();
+
             v1.Visit (np4);
+            v2.Visit (np4);
+            v3.Visit (np4);
          
 
             np1.Accept(v1);
-            Console.WriteLine($"La suma de las edades es:{v1.SumaEdades}");
+            Console.WriteLine($"Suma de edades:{v1.SumaEdades}");
+
             np1.Accept(v2);
-            Console.WriteLine($"La person con el nombre mas largo es {v2.LongestName}");
+            Console.WriteLine($"Nombre mas largo es {v2.LongestName}");
+            
             np1.Accept(v3);
-            Console.WriteLine($"El mayor de todos es {v3.OldestKid}");
+            Console.WriteLine($"El mas viejo es: {v3.OldestKid} y es");
 
         }
     }
